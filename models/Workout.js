@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 
-const transactionSchema = new Schema({
+const workOutSchema = new Schema({
     day: {
         type: Date,
         exercises: [
@@ -17,4 +17,6 @@ const transactionSchema = new Schema({
     }
 });
 
-const Transaction = mongoose.model('Transaction', transactionSchema)
+const Transaction = mongoose.model('Transaction', workOutSchema)
+
+module.exports = Transaction;

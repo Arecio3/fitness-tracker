@@ -1,0 +1,38 @@
+Workout Tracker
+-- Server.js
+    Express w/app.listen
+    Mongoose w/ connect object
+ -- Model Folder
+   -- Model:
+        Workout.js
+        day: date,
+        exercises: Array
+            type: string,
+            name: string,
+            duration:number,
+            weight:number,
+            reps:number,
+            sets:number,
+            distance:number
+-- Seed the DB with initial data
+-- Routes
+   View
+   "/exercise" , send file exercise.html
+   "/stats" , send file stats.html
+   API
+   POST '/api/workouts' Workout.create()
+   PUT '/api/workouts/:id' Workout.findByIdAndUpdate
+                        { $push: { exercises: req.body } }
+   GET '/api/workouts' Workout.aggregate()
+                        $addFields: {
+                            totalDuration: {
+                                $sum: '$exercises.duration',
+                            },
+                        }
+    GET '/api/workouts/range' Workout.aggregate()
+                        $addFields: {
+                            totalDuration: {
+                                $sum: '$exercises.duration',
+                            },
+                        },
+    DELETE '/api/workouts' Workout.findByIdAndDelete()

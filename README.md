@@ -19,7 +19,8 @@
   * [Questions](#Questions)
   
   # Description 
-This site allows you to view, create, and track daily workouts with a graph and total ammont of weight reps, or miles you ran in that workout.Here is the link to Deployed Site:[Link]('https://fitness-tracker-arecio.herokuapp.com/?id=609d904d2c4c8d0015908732')
+This site allows you to view, create, and track daily workouts with a graph and total ammont of weight reps, or miles you ran in that workout.Here is the link to Deployed Site
+[Link]('https://fitness-tracker-arecio.herokuapp.com/?id=609d904d2c4c8d0015908732')
 
 
   # Installation
